@@ -1,7 +1,13 @@
-export default function Question({getQuestions}) {
+import Options from "./Options";
+
+export default function Question({question,index}) {
   
-  const questions = getQuestions.map(questionObj => questionObj.question);
   return (
-    <div>{questions}</div>
+    <div>
+      <h4>{question.question}</h4>
+
+      <Options question={question} index={index} />
+    </div>
   )
 }
+ 
